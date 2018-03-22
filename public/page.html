@@ -61,7 +61,10 @@
     </div>
 
     <div class="container">
-      <h1>GiveFor.me</h1>
+      <h1>Page for</h1>
+      <div data-bind="foreach: charities">
+          <charity-dontate-card params="charityId: id"></charity-dontate-card>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -84,6 +87,7 @@
           let app = firebase.app();
           let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
           console.info(`Firebase SDK loaded with ${features.join(', ')}`);
+          launchPage();
         } catch (e) {
           console.error(e);
         }

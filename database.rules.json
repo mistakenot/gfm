@@ -1,6 +1,20 @@
 {
   "rules": {
-    ".read": "auth != null",
-    ".write": "auth != null"
+    ".read": "false",
+    ".write": "false",
+    
+    "page": {
+      ".read": "true"
+    },
+
+    "user": {
+      "$uid": {
+        ".write": "$uid === auth.uid"
+      }
+    },
+
+    "charity": {
+      ".read": "true"
+    }
   }
 }
