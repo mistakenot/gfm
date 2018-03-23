@@ -10,8 +10,8 @@
       "**/node_modules/**"
     ],
     "rewrites": [
-      {"source": "/", "destination": "/index.html"},
-      {"source": "**", "destination": "/page.html"}
+      {"source": "/demo", "destination": "/demo.html"},
+      {"source": "**", "destination": "/landing.html"}
     ]
   },
   "storage": {
