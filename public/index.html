@@ -24,6 +24,7 @@
     <script src="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
     <script src="/site.js"></script>
+    <script src="/components.js"></script>
   </head>
   <body>
     <div class="container">
@@ -34,9 +35,12 @@
             <a class="nav-link" href="#">Create your page</a>
           </li>
         </ul>
-        <ul class="nav">
+        <ul class="nav" data-bind="with: auth">
           <li class="nav-item">
-            <a class="nav-link" href="#" onclick="launchAuth()" data-toggle="modal" data-target="#auth-modal">Sign in</a>
+            <a data-bind="ifnot: isLoggedIn(), click: signIn" class="nav-link" href="#" data-toggle="modal" data-target="#auth-modal">Sign in</a>
+          </li>
+          <li class="nav-item">
+              <a data-bind="if: isLoggedIn()" class="nav-link" href="#" onclick="launchAuth()" data-toggle="modal" data-target="#auth-modal">Sign out</a>
           </li>
         </ul>
       </nav>
@@ -84,6 +88,7 @@
           let app = firebase.app();
           let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
           console.info(`Firebase SDK loaded with ${features.join(', ')}`);
+          launchHome(app)
         } catch (e) {
           console.error(e);
         }
