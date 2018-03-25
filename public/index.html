@@ -1,100 +1,98 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Material Design for Bootstrap fonts and icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-    <!-- Material Design for Bootstrap CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.css" />
-    <link href="css/open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+<!-- Material Design for Bootstrap fonts and icons -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+<!-- Material Design for Bootstrap CSS -->
+<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.css" />
+<link href="assets/css/open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
 
-    <title>Welcome to Firebase Hosting</title>
+<title>GiveFor.me</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/4.12.0/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/4.12.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/4.12.0/firebase-database.js"></script>
-    <script defer src="/__/firebase/4.12.0/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/4.12.0/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
-    <script src="/site.js"></script>
-    <script src="/components.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <nav class="navbar navbar-light bg-light">
+<!-- update the version number as needed -->
+<script defer src="/__/firebase/4.12.0/firebase-app.js"></script>
+<!-- include only the Firebase features as you need -->
+<script defer src="/__/firebase/4.12.0/firebase-auth.js"></script>
+<script defer src="/__/firebase/4.12.0/firebase-database.js"></script>
+<script defer src="/__/firebase/4.12.0/firebase-messaging.js"></script>
+<script defer src="/__/firebase/4.12.0/firebase-storage.js"></script>
+<!-- initialize the SDK after all desired features are loaded -->
+<script defer src="/__/firebase/init.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/components.js"></script> </head>
+  <body><div class="container">
+    <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="/">
-          <span class="oi oi-heart" title="icon name" aria-hidden="true"></span>
-          GiveFor.me
+        <span class="oi oi-heart" title="icon name" aria-hidden="true"></span>
+        GiveFor.me
         </a>
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+        <li class="nav-item active">
             <a class="nav-link" href="#">
-              Create your page
+            Create your page
             </a>
-          </li>
+        </li>
         </ul>
         <ul class="nav" data-bind="with: auth">
-          <li class="nav-item">
+        <li class="nav-item">
             <a data-bind="ifnot: isLoggedIn(), click: signIn" class="nav-link" href="#" data-toggle="modal" data-target="#auth-modal">Sign in</a>
-          </li>
-          <li class="nav-item">
-              <a data-bind="if: isLoggedIn()" class="nav-link" href="#" onclick="launchAuth()" data-toggle="modal" data-target="#auth-modal">Sign out</a>
-          </li>
+        </li>
+        <li class="nav-item">
+            <a data-bind="if: isLoggedIn()" class="nav-link" href="#" onclick="launchAuth()" data-toggle="modal" data-target="#auth-modal">Sign out</a>
+        </li>
         </ul>
-      </nav>
-  </div>
-  <div class="modal fade" id="auth-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+    </nav>
+</div>
+
+<div class="modal fade" id="auth-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
+        <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true">&times;</span>
             </button>
-          </div>
-          <div class="modal-body">
-            <div id="auth-container"></div>
-          </div>
-          <div class="modal-footer">
-            
-          </div>
         </div>
-      </div>
+        <div class="modal-body">
+            <div id="auth-container"></div>
+        </div>
+        <div class="modal-footer">
+            
+        </div>
+        </div>
     </div>
+</div><div class="container text-center">
+    <section>
+    <h1>GiveFor.me</h1>
+    <p class='lead'>Create a page that encourages your friends and family to give to your favourite charities.</p>
+    <p class='lead'>See a demo <a href='/charlie' target="_blank">here</a>.</p>
+    <img  class="img-thumbnail img-fluid rounded" src='assets/img/screenshot.png'></img>
+    </section>
 
-    <div class="container text-center">
-      <section>
-        <h1>GiveFor.me</h1>
-        <p class='lead'>Create a page that encourages your friends and family to give to your favourite charities.</p>
-        <p class='lead'>See a demo <a href='/charlie' target="_blank">here</a>.</p>
-        <img  class="img-thumbnail img-fluid rounded" src='img/screenshot.png'></img>
-      </section>
+    <br />
 
-      <br />
+    <section>
+    <p class='lead'>Donators can leave you a personalised e-card before securely paying by card.</p>
+    <img  class="img-thumbnail img-fluid rounded" src='assets/img/screenshot2.png'></img>
+    </section>
 
-      <section>
-        <p class='lead'>Donators can leave you a personalised e-card before securely paying by card.</p>
-        <img  class="img-thumbnail img-fluid rounded" src='img/screenshot2.png'></img>
-      </section>
+    <section>
+    <p class='lead'>Create your page now and see how much you can raise.</p>
+    <p><code><a>https://givefor.me/charlie</a></code></p>
+    <button class='btn btn-raised btn-primary'>Get started now</button>
+    </section>
+</div>
 
-      <section>
-        <p class='lead'>Create your page now and see how much you can raise.</p>
-        <p><code><a>https://givefor.me/charlie</a></code></p>
-        <button class='btn btn-raised btn-primary'>Get started now</button>
-      </section>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+    <script src="https://js.stripe.com/v3/"></script>
   </body>
 </html>

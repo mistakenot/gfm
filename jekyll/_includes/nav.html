@@ -1,0 +1,42 @@
+<div class="container">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+        <span class="oi oi-heart" title="icon name" aria-hidden="true"></span>
+        GiveFor.me
+        </a>
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">
+            Create your page
+            </a>
+        </li>
+        </ul>
+        <ul class="nav" data-bind="with: auth">
+        <li class="nav-item">
+            <a data-bind="ifnot: isLoggedIn(), click: signIn" class="nav-link" href="#" data-toggle="modal" data-target="#auth-modal">Sign in</a>
+        </li>
+        <li class="nav-item">
+            <a data-bind="if: isLoggedIn()" class="nav-link" href="#" onclick="launchAuth()" data-toggle="modal" data-target="#auth-modal">Sign out</a>
+        </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="modal fade" id="auth-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div id="auth-container"></div>
+        </div>
+        <div class="modal-footer">
+            
+        </div>
+        </div>
+    </div>
+</div>
