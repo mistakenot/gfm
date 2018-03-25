@@ -10,7 +10,7 @@
       "**/node_modules/**"
     ],
     "rewrites": [
-      {"source": "/demo", "destination": "/demo.html"},
+      {"source": "/charlie", "destination": "/demo-page.html"},
       {"source": "**", "destination": "/landing.html"}
     ]
   },

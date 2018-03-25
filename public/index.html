@@ -9,6 +9,7 @@
     <!-- Material Design for Bootstrap CSS -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.css" />
+    <link href="css/open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
 
     <title>Welcome to Firebase Hosting</title>
 
@@ -29,10 +30,15 @@
   <body>
     <div class="container">
       <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">GiveFor.me</a>
+        <a class="navbar-brand" href="/">
+          <span class="oi oi-heart" title="icon name" aria-hidden="true"></span>
+          GiveFor.me
+        </a>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Create your page</a>
+            <a class="nav-link" href="#">
+              Create your page
+            </a>
           </li>
         </ul>
         <ul class="nav" data-bind="with: auth">
@@ -64,9 +70,26 @@
       </div>
     </div>
 
-    <div class="container">
-      <h1>GiveFor.me</h1>
-      <p>Create a page that to encourages your friends and family to give to your favourite charities.</p>
+    <div class="container text-center">
+      <section>
+        <h1>GiveFor.me</h1>
+        <p class='lead'>Create a page that encourages your friends and family to give to your favourite charities.</p>
+        <p class='lead'>See a demo <a href='/charlie' target="_blank">here</a>.</p>
+        <img  class="img-thumbnail img-fluid rounded" src='img/screenshot.png'></img>
+      </section>
+
+      <br />
+
+      <section>
+        <p class='lead'>Donators can leave you a personalised e-card before securely paying by card.</p>
+        <img  class="img-thumbnail img-fluid rounded" src='img/screenshot2.png'></img>
+      </section>
+
+      <section>
+        <p class='lead'>Create your page now and see how much you can raise.</p>
+        <p><code><a>https://givefor.me/charlie</a></code></p>
+        <button class='btn btn-raised btn-primary'>Get started now</button>
+      </section>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
