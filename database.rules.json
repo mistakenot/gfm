@@ -1,21 +1,6 @@
 {
   "rules": {
     ".read": "false",
-    ".write": "false",
-    
-    "page": {
-      ".read": "true"
-    },
-
-    "user": {
-      "$uid": {
-        ".write": "$uid === auth.uid",
-        ".read": "$uid === auth.uid"
-      }
-    },
-
-    "charity": {
-      ".read": "true"
-    }
+    ".write": "false"
   }
 }
