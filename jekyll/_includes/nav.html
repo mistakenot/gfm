@@ -4,20 +4,25 @@
         <span class="oi oi-heart" title="icon name" aria-hidden="true"></span>
         GiveFor.me
         </a>
-        <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">
-            Create your page
-            </a>
-        </li>
-        </ul>
-        <ul class="nav" data-bind="with: auth">
-        <li class="nav-item">
-            <a data-bind="ifnot: isLoggedIn(), click: signIn" class="nav-link" href="#" data-toggle="modal" data-target="#auth-modal">Sign in</a>
-        </li>
-        <li class="nav-item">
-            <a data-bind="if: isLoggedIn()" class="nav-link" href="#" onclick="launchAuth()" data-toggle="modal" data-target="#auth-modal">Sign out</a>
-        </li>
+        <!-- <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                Create your page
+                </a>
+            </li>
+        </ul> -->
+        <ul class="nav d-none d-sm-block" data-bind="with: auth">
+            <li class="nav-item active">
+                <a class="nav-link" href="login">
+                Create your page
+                </a>
+            </li>
+            <!-- <li class="nav-item">
+                <a data-bind="ifnot: isLoggedIn(), click: signIn" class="nav-link" href="#" data-toggle="modal" data-target="#auth-modal">Sign in</a>
+            </li>
+            <li class="nav-item">
+                <a data-bind="if: isLoggedIn()" class="nav-link" href="#" onclick="launchAuth()" data-toggle="modal" data-target="#auth-modal">Sign out</a>
+            </li> -->
         </ul>
     </nav>
 </div>

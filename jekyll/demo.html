@@ -1,0 +1,176 @@
+---
+layout: default
+---
+
+<div class="container">
+    <div class="jumbotron">
+        <div class='media'>
+            <img class="img-rounded rounded mx-auto d-block rounded-circle" style='width: 220px; height: 220px' src='assets/img/profile.jpg'>
+        </div>
+        <h1 class="display-4 text-center">Charlie Daly</h1>
+
+        <p class="lead text-center">"Instead of gifts this birthday, I'm asking people to donate to some of my favourite charities. Thanks!"</p>
+        
+        <hr class="my-4">
+
+        <div class='card-deck'>
+            <div class="card">
+                <div class="card-img-top">
+                    <a href=''>
+                        <img src='assets/img/eff.jpeg' class="card-img-top img-fluid" src="..." alt="Card image cap">
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 data-bind="text: title" class="card-title">Electronic Frontier Foundation</h5>
+                    <p data-bind="text: description" class="card-text">The leading nonprofit defending digital privacy, free speech, and innovation.    </p>
+                </div>
+                <div class="card-footer text-muted">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-secondary" type="button">-$5</button>
+                        </div>
+                        <input data-bind="value: amount" type='text' value='5.00' class="form-control text-center" aria-label="Amount (to the nearest dollar)">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">$</span>
+                            <button class="btn btn-secondary" type="button">+$5</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-img-top">
+                    <a href=''>
+                        <img src='assets/img/wikimedia.svg' class="card-img-top img-fluid" src="..." alt="Card image cap">
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 data-bind="text: title" class="card-title">Wikimedia Foundation</h5>
+                    <p data-bind="text: description" class="card-text">Dedicated to encouraging the growth, development and distribution of free, multilingual, educational content.</p>
+                </div>
+                <div class="card-footer text-muted">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-secondary" type="button">-$5</button>
+                        </div>
+                        <input data-bind="value: amount" value='10.00' type='text' class="form-control text-center" aria-label="Amount (to the nearest dollar)">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">$</span>
+                            <button class="btn btn-secondary" type="button">+$5</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img-top">
+                    <a href=''>
+                        <img src='assets/img/redcross.jpeg' class="card-img-top img-fluid" src="..." alt="Card image cap">
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 data-bind="text: title" class="card-title">American Red Cross</h5>
+                    <p data-bind="text: description" class="card-text">Working to bring relief and support to those in crisis and helping you be prepared to respond in emergencies.</p>
+                </div>
+                <div class="card-footer text-muted">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-secondary" type="button">-$5</button>
+                        </div>
+                        <input data-bind="value: amount" value='5.00' type='text' class="form-control text-center" aria-label="Amount (to the nearest dollar)">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">$</span>
+                            <button class="btn btn-secondary" type="button">+$5</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img-top">
+                    <a href=''>
+                        <img src='assets/img/wwf.jpeg' class="card-img-top img-fluid" src="..." alt="Card image cap">
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 data-bind="text: title" class="card-title">World Wildlife Fund</h5>
+                    <p data-bind="text: description" class="card-text">The world’s leading independent wildlife conservation organisation.</p>
+                </div>
+                <div class="card-footer text-muted">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-secondary" type="button">-$5</button>
+                        </div>
+                        <input data-bind="value: amount" value='0.00' type='text' class="form-control text-center" aria-label="Amount (to the nearest dollar)">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">$</span>
+                            <button class="btn btn-secondary" type="button">+$5</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="my-4">
+
+        <div class="row">
+            <div class='col-md-12 text-center'>
+                <h4 class="text-center">Add a personalised greeting</h4>
+                <p>Charlie will receive a card by email</p>
+                <small class="text-muted">Optional</small>
+            </div>
+        </div>
+        <br />
+        <div class='row'>
+            <div class='col-md-6 mx-auto'>
+                <div class="card">
+                    <div class="card-img-top">
+                        <a href='#'>
+                            <div class="carousel-item active">
+                                <img src='assets/img/placeholder.jpg' class="card-img-top" alt="Card image cap">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class='text-center'>Upload image</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <textarea class="form-control" aria-label="With textarea" rows='7' placeholder="Your message."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-4">
+        <h4 class="text-center">Payment</h4>
+        <div class='row'>
+            <div class='col-md-6 mx-auto text-center'>
+                <div clas='row'>
+                    <div class='col-md-12'>
+                        <p><small class="text-muted">Your own donation amount will be kept private</small></p>
+                        <p>Amound to pay: $20.00</p>
+                        <form action="your-server-side-code" method="POST">
+                            <script
+                                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+                                data-amount="2000"
+                                data-name="GiveFor.me"
+                                data-description="Widget"
+                                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                                data-locale="auto"
+                                data-zip-code="true">
+                            </script>
+                        </form>
+                        <a href='https://stripe.com' target="_blank">
+                            <img src='assets/img/stripe.png' />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
